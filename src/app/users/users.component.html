@@ -1,0 +1,27 @@
+<form [formGroup]="profileForm">
+  
+    <label>
+      First Name:
+      <input type="text" formControlName="firstName">
+    </label>
+  
+    <label>
+      Last Name:
+      <input type="text" formControlName="lastName">
+    </label>
+    <label>
+        Date of Birth:
+        <input type="text" formControlName="DOB">
+      </label>
+  
+  </form>
+  <!-- <p>
+       Typing...: {{profileForm.firstName.value}}
+    </p> 
+    <p>
+        Typing...: {{profileForm.lasttName.value}}
+     </p>  -->
+    
+     <button type="submit" [disabled]="!profileForm.valid" (click)=onSubmit()>Submit</button>
+     
+    
